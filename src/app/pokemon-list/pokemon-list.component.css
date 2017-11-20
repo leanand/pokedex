@@ -1,0 +1,44 @@
+.btn-group{
+  width: 130px;
+  margin: auto;
+  padding-bottom: 10px;
+}
+.btn-group > button{
+  height: 30px; 
+  width: 60px;
+  border-radius: 5%;
+  background: #e2e1e1;
+  transition: background-color .15s ease-in-out, transform .15s ease-in-out;
+}
+.btn-group > button:hover:enabled{
+  background: #b9b7b7;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+}
+
+figcaption{
+  text-align: center;
+}
+.pokemon-wrap{
+  border: 1px solid #d0d0d0;
+  padding: 5px;
+  background: #BDBDBD;
+  border-radius: 5%;
+  /*transition-duration: 300ms;*/
+  transition: background-color .15s ease-in-out, transform .15s ease-in-out;
+}
+
+.pokemon-wrap:hover{
+  transform: translate3d(0,-5px,0);
+  background: #9E9E9E;
+}
+.pokemon-name{
+  text-transform: capitalize;
+}
+.pokemon-img > img{
+  transform: scale(1.6);
+}

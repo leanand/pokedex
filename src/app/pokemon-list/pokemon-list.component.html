@@ -1,0 +1,15 @@
+<div class="btn-group" *ngIf="pokemons.length != 0">
+  <button [disabled]="previousPage === null" (click)="openPreviousPage()" id="previousButton">Previous</button>
+  <button [disabled]="nextPage === null" (click)="openNextPage()" id="nextButton">Next</button>
+</div>
+<section class="grid-container">
+  <div *ngFor="let pokemon of pokemons" (click)="openPokemonDetail(pokemon)" class="pokemon-wrap">
+    <figure class="pokemon-img">
+      <img src="{{this.getPokemonUrl(pokemon.url)}}"/>
+      <figcaption class="pokemon-name"><h4>{{pokemon.name}}</h4></figcaption>
+    </figure>
+  </div>
+</section>
+<div class="full-screen" *ngIf="pokemons.length == 0">
+  <div class="loader center"></div>
+</div>

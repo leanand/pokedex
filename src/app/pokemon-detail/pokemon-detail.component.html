@@ -1,0 +1,40 @@
+<a routerLink="/pokemons">&lt;Back</a>
+
+<section class="grid-container" *ngIf="pokemonDetail">
+  <div class="pokemon-image">
+    <img src="{{pokemonDetail.sprites.front_default}}"/>
+  </div>
+  <div class="pokemon-header">
+    <span>{{pokemonDetail.name}}</span>
+  </div>
+  <div class="pokemon-height">
+    <span class="label">Height</span><br/><span class="value">{{pokemonDetail.height}}</span>
+  </div>
+  <div class="pokemon-weight">
+    <span class="label">Weight</span><br/><span class="value">{{pokemonDetail.weight}}</span>
+  </div>
+  <section class="pokemon-abilities">
+    <h4> Abilities </h4>
+    <ul class="pokemon-abilities-list">
+      <li *ngFor="let ability of abilityDetails">
+        <h4>{{ability.name}}</h4>
+        <p>{{pickEffectEnglish(ability)}}</p>
+      </li>
+    </ul>
+  </section>
+</section>
+<!-- <div>
+  <div *ngIf="pokemonDetail">
+    <h1>{{pokemonDetail.name}}</h1>
+    <h1>{{pokemonDetail.weight}}</h1>
+  <img src="{{pokemonDetail.sprites.front_default}}"/>
+    <li *ngFor="let ability of abilityDetails">
+      <h1>{{ability.name}}</h1>
+      <span>{{pickEffectEnglish(ability)}}</span>
+    </li>
+  </div>
+</div>
+ -->
+<div class="full-screen" *ngIf="pokemonDetail === null">
+  <div class="loader center"></div>
+</div>

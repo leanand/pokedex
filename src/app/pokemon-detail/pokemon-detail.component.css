@@ -1,0 +1,72 @@
+.pokemon-image{
+  grid-area: pokemon-image;
+}
+.pokemon-image > img{
+  width: 200px;
+  height: 200px;
+}
+.pokemon-header{
+  grid-area: pokemon-header;
+  text-transform: capitalize;
+  /*text-align: center;*/
+  padding-left: 10px;
+  font-size: 36px;
+  background: #212121;
+  color: white;
+}
+.pokemon-header > span{
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 12px;
+}
+.pokemon-height{
+  grid-area: pokemon-height;
+  text-align: center;
+}
+.pokemon-height > span:first-child{
+  display: inline-block;
+  padding-top: 50px;
+}
+.pokemon-weight{  
+  grid-area: pokemon-weight;
+  text-align: center;
+}
+.pokemon-weight > span:first-child{
+  display: inline-block;
+  padding-top: 50px;
+}
+.pokemon-abilities{
+  grid-area: pokemon-abilities;
+}
+.pokemon-abilities > h4{
+  font-weight: 600;
+  background: #757575;
+  text-align: center;
+}
+.pokemon-abilities-list h4{
+  text-transform: capitalize;
+}
+.pokemon-abilities-list p{
+  text-indent: 10px;
+}
+.value{
+  font-size: 30px;
+}
+
+ul{
+  list-style-type: none;
+}
+.grid-container{
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows: 75px 100px 100px auto ;
+  grid-template-areas:
+  "pokemon-header pokemon-header pokemon-header pokemon-header"
+  "pokemon-image pokemon-image pokemon-height pokemon-weight"
+  "pokemon-image pokemon-image pokemon-height pokemon-weight"
+  "pokemon-abilities pokemon-abilities pokemon-abilities pokemon-abilities";
+  width: 400px;
+  margin: auto;
+  /*border: 5px solid #03a9f47a;*/
+  background: #BDBDBD;
+}
