@@ -1,5 +1,4 @@
 <a routerLink="/pokemons">&lt;Back</a>
-
 <section class="grid-container" *ngIf="pokemonDetail">
   <div class="pokemon-image">
     <img src="{{pokemonDetail.sprites.front_default}}"/>
@@ -23,18 +22,6 @@
     </ul>
   </section>
 </section>
-<!-- <div>
-  <div *ngIf="pokemonDetail">
-    <h1>{{pokemonDetail.name}}</h1>
-    <h1>{{pokemonDetail.weight}}</h1>
-  <img src="{{pokemonDetail.sprites.front_default}}"/>
-    <li *ngFor="let ability of abilityDetails">
-      <h1>{{ability.name}}</h1>
-      <span>{{pickEffectEnglish(ability)}}</span>
-    </li>
-  </div>
-</div>
- -->
 <div class="full-screen" *ngIf="pokemonDetail === null">
   <div class="loader center"></div>
 </div>

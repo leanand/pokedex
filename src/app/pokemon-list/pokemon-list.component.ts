@@ -17,12 +17,13 @@ export class PokemonListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    console.log("Initializing pokemon list page");
     this.getPokemonList();
   }
-
   private getPokemonList(offsetUrl=null){
-    console.log("The offset url is ", offsetUrl);
+    console.log("Getting pokemon list from pokemon service");
     this.pokemonService.getPokemonList(offsetUrl).subscribe((pokemonResults:any)=>{
+      console.log("pokemonList: result from pokemon list", pokemonResults);
       if(pokemonResults.results){
         this.pokemons = pokemonResults.results;
         this.previousPage = pokemonResults.previous;
@@ -33,12 +34,10 @@ export class PokemonListComponent implements OnInit {
   private getPokemonUrl(pokemonUrl:any): string{
     return this.pokemonService.getPokemonSpriteUrl(pokemonUrl);
   }
-
   private openPokemonDetail(pokemon: any){
     let pokemonId = this.pokemonService.getPokemonId(pokemon.url);
     this.router.navigate([`/pokemons/${pokemonId}`]);
   }
-
   private clearState(){
     this.pokemons = [];
     this.previousPage = null;
@@ -50,7 +49,6 @@ export class PokemonListComponent implements OnInit {
       this.clearState();
     }
   }
-
   private openNextPage(){
     if(this.nextPage){
      this.getPokemonList(this.nextPage); 

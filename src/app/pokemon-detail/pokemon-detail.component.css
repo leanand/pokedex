@@ -1,3 +1,17 @@
+.grid-container{
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows: 75px 100px 100px auto ;
+  grid-template-areas:
+  "pokemon-header pokemon-header pokemon-header pokemon-header"
+  "pokemon-image pokemon-image pokemon-height pokemon-weight"
+  "pokemon-image pokemon-image pokemon-height pokemon-weight"
+  "pokemon-abilities pokemon-abilities pokemon-abilities pokemon-abilities";
+  width: 400px;
+  margin: auto;
+  /*border: 5px solid #03a9f47a;*/
+  background: #BDBDBD;
+}
 .pokemon-image{
   grid-area: pokemon-image;
 }
@@ -55,18 +69,4 @@
 
 ul{
   list-style-type: none;
-}
-.grid-container{
-  display: grid;
-  grid-template-columns: 100px 100px 100px 100px;
-  grid-template-rows: 75px 100px 100px auto ;
-  grid-template-areas:
-  "pokemon-header pokemon-header pokemon-header pokemon-header"
-  "pokemon-image pokemon-image pokemon-height pokemon-weight"
-  "pokemon-image pokemon-image pokemon-height pokemon-weight"
-  "pokemon-abilities pokemon-abilities pokemon-abilities pokemon-abilities";
-  width: 400px;
-  margin: auto;
-  /*border: 5px solid #03a9f47a;*/
-  background: #BDBDBD;
 }
